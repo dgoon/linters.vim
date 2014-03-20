@@ -207,3 +207,9 @@ for linter in g:linters_extra
 endfor
 
 au BufWritePost * call s:WritePostHook()
+
+function s:Exit()
+    cclose
+endfunction
+
+au! QuitPre <buffer> call s:Exit()
